@@ -29,3 +29,7 @@ sudo usermod -a -G docker $USER
 
 # Test the installation
 docker run hello-world
+
+
+#Bug-fix: https://github.com/jgsqware/clairctl/issues/60
+# sudo chmod 666 /var/run/docker.sock
