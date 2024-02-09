@@ -22,7 +22,10 @@ echo \
 sudo apt-get update
 
 # Install the latest version
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+# Add current user to the docker group
+sudo usermod -a -G docker $USER
 
 # Test the installation
-sudo docker run hello-world
+docker run hello-world
